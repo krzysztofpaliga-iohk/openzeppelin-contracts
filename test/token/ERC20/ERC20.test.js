@@ -23,7 +23,7 @@ contract('ERC20', function (accounts) {
     this.token = await ERC20Mock.new(name, symbol, initialHolder, initialSupply);
   });
 
-  it('has a name', async function () {
+  it.only('has a name', async function () {
     expect(await this.token.name()).to.equal(name);
   });
 
